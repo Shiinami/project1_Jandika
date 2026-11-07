@@ -1,7 +1,5 @@
 // ✿ Personalize everything here — no other file needs editing.
-import memory1 from "@/assets/foto1.png";
-import memory2 from "@/assets/foto2.png";
-import memory3 from "@/assets/foto3.jpg";
+import { imageVariants } from "@/lib/images";
 import songs from "@/assets/mulfanart.mp3";
 
 export const birthday = {
@@ -9,34 +7,37 @@ export const birthday = {
   senderName: "someone is rooting for you.",
   birthdayDate: "20 Oktober 2007",
   heroTitle: "Happy Birthday",
-  heroSubtitle: "Hari ini, dunia menjadi lebih baik karena ada kamu di dalamnya. I'm glad the world has you in it. Aku harap kamu tidak pernah lupa bahwa kehadiranmu begitu berarti. Terima kasih sudah menjadi dirimu, dan sudah bertahan sampai hari ini.",
+  heroSubtitle:
+    "Hari ini, dunia menjadi lebih baik karena ada kamu di dalamnya. I'm glad the world has you in it. Aku harap kamu tidak pernah lupa bahwa kehadiranmu begitu berarti. Terima kasih sudah menjadi dirimu, dan sudah bertahan sampai hari ini.",
   heroCta: "Mulai Cerita",
   storyTitle: "Hari ini, dunia merayakan seseorang yang istimewa.",
   birthdayMessage: [
-    "You deserve beautiful things.", 
+    "You deserve beautiful things.",
     "perhaps more than you realize.",
-    "Barangkali tanpa kamu sadari.", 
+    "Barangkali tanpa kamu sadari.",
     "kehadiranmu telah menjadi bagian kecil dari banyak hal baik.",
-    "Someone is wishing you well, quietly. ♡"
+    "Someone is wishing you well, quietly. ♡",
   ],
   // Replace with your own photos (import them above, or use https URLs).
   gallery: [
-{ 
-  image: memory1, 
-  title: "click me", 
-  // caption: "Di antara rintik hujan hari itu, ada senyummu yang diam-diam membuatku jatuh hati." 
-},
-{ 
-  image: memory2, 
-  title: "click me", 
-  // caption: "Awalnya hanya dua orang yang ingin saling mengenal, lalu perlahan kamu menjadi seseorang yang istimewa." 
-},
-{ 
-  image: memory3, 
-  title: "click me", 
-  // caption: "Empat pose sederhana, tapi setiap fotonya menyimpan alasan untuk selalu mengingat kita." 
-},
-
+    {
+      image: imageVariants("foto1"),
+      thumbnail: imageVariants("foto1", true),
+      title: "click me",
+      // caption: "Di antara rintik hujan hari itu, ada senyummu yang diam-diam membuatku jatuh hati."
+    },
+    {
+      image: imageVariants("foto2"),
+      thumbnail: imageVariants("foto2", true),
+      title: "click me",
+      // caption: "Awalnya hanya dua orang yang ingin saling mengenal, lalu perlahan kamu menjadi seseorang yang istimewa."
+    },
+    {
+      image: imageVariants("foto3"),
+      thumbnail: imageVariants("foto3", true),
+      title: "click me",
+      // caption: "Empat pose sederhana, tapi setiap fotonya menyimpan alasan untuk selalu mengingat kita."
+    },
   ],
   birthdayWishes: [
     "Semoga tidak ada musim yang membuatmu lupa bahwa kamu selalu punya kesempatan untuk tumbuh dan kembali mekar.",

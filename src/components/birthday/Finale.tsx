@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
-import night from "@/assets/9.png";
+import { imageVariants } from "@/lib/images";
+const night = imageVariants("9");
 import couple from "@/assets/couple.png";
 import { birthday } from "@/config/birthday";
 import { Petals } from "./Petals";
@@ -9,12 +10,13 @@ export function Finale({ onReplay }: { onReplay: () => void }) {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <img
-        src={night}
+        {...night}
+        sizes="100vw"
+        decoding="async"
         alt=""
         aria-hidden
         loading="lazy"
-        width={1920}
-        height={1088}
+
         className="absolute inset-0 h-full w-full scale-x-[-1] object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-night" />

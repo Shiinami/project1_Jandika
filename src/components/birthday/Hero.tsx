@@ -1,12 +1,6 @@
-import {
-  motion,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, useMotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
-import sky from "@/assets/tree.webp";
+import { heroImage } from "@/lib/images";
 import tree from "@/assets/tree.png";
 import couple from "@/assets/couple.png";
 import { birthday } from "@/config/birthday";
@@ -49,10 +43,11 @@ export function Hero({ onStart }: { onStart: () => void }) {
     <section ref={ref} className="relative h-screen overflow-hidden">
       <motion.div style={{ y: bgScroll }} className="absolute inset-0">
         <motion.img
-          src={sky}
+          {...heroImage}
+          sizes="100vw"
+          fetchPriority="high"
+          loading="eager"
           alt="Golden hour Japanese landscape"
-          width={1920}
-          height={1088}
           style={{ x: bgX, y: bgY, scale: bgScale }}
           className="h-full w-full object-cover"
         />
