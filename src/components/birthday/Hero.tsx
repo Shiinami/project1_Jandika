@@ -6,7 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
-import sky from "@/assets/tree.png";
+import sky from "@/assets/tree.webp";
 import tree from "@/assets/tree.png";
 import couple from "@/assets/couple.png";
 import { birthday } from "@/config/birthday";
